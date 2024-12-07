@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vulnerability Scanner</title>
+    <style>
+        /* Background gradient animation */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: linear-gradient(-45deg, #ff0080, #ff8c00, #40e0d0, #8a2be2);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Centered container with glow */
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+            max-width: 500px;
+            width: 90%;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Title with crazy effects */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+            text-shadow: 0 0 15px #ff0080, 0 0 30px #ff8c00, 0 0 45px #40e0d0;
+            animation: flicker 2s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                text-shadow: 0 0 5px #ff0080, 0 0 10px #ff8c00, 0 0 20px #40e0d0;
+            }
+            20%, 24%, 55% {
+                text-shadow: 0 0 5px #ff0080, 0 0 15px #ff8c00, 0 0 25px #40e0d0;
+            }
+        }
+
+        /* Input box styling */
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Crazy glowing button */
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background: linear-gradient(45deg, #ff0080, #ff8c00);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 15px #ff0080, 0 0 30px #ff8c00;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px #ff0080, 0 0 45px #ff8c00;
+        }
+
+        /* Footer text */
+        .footer {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer a {
+            color: #40e0d0;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vulnerability Scanner</h1>
+        <form action="/scan" method="POST">
+            <input type="text" id="url" name="url" placeholder="Enter Target URL" required>
+            <br>
+            <button type="submit">Start Scan</button>
+        </form>
+        <div class="footer">
+            <p>Built with ❤️ by <a href="#">LockDown</a></p>
+        </div>
+    </div>
+</body>
+</html>
