@@ -28,6 +28,9 @@ This application is a web-based tool for performing vulnerability scans on websi
 - `reports/`: Directory where generated reports are stored.
 
 ---
+# IMP FILES needed to be create 
+
+Set up a `reports` folder to store all generated reports, ensuring they are saved in the designated directory. Additionally, create a `templates` folder to house the `index.html` file for the web interface.
 
 ## Installation
 1. Clone this repository:
